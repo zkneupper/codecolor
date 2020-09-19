@@ -2,6 +2,8 @@
 codecolor
 =========
 
+![Codecolor Logo](https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png)
+
 
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
