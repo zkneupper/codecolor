@@ -26,7 +26,25 @@ codecolor
 Features
 --------
 
-* TODO
+* ...
+
+
+
+To Do List
+--------
+
+* Add module docstring to codecolor.py;
+* Add docstrings to functions in to codecolor.py;
+* Create installable package from the codecolor.py module;
+* Manually test package installation
+* Flesh out readme
+	* Motivation
+	* Example usage
+	* Installation
+* Add pytest unit tests
+* Deploy to pypi
+
+
 
 Credits
 -------
