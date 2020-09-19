@@ -50,10 +50,20 @@ def highlight_code(code, style="default"):
     return highlighted_code
 
 
-def getsource(obj, style="default"):
-    """Add docstring"""
-    highlighted_code = highlight_code(inspect.getsource(obj), style=style)
-    return highlighted_code
+def getsource(obj, style="default") -> str:
+    """Add docstring
+
+    If you set style=None, function will return the code 
+    with no syntax highlighting.
+
+    """
+
+    code_string = inspect.getsource(obj)
+
+    if style is not None:
+        code_string = highlight_code(code_string, style=style)
+
+    return code_string
 
 
 def printsource(obj, style="default"):
