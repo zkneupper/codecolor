@@ -16,7 +16,7 @@ codecolor
 
 
 
-"Inspect python object code with colorful syntax highlighting"
+Inspect python object code with colorful syntax highlighting
 
 
 * Free software: Apache Software License 2.0
@@ -35,13 +35,11 @@ To Do List
 
 * Add module docstring to codecolor.py;
 * Add docstrings to functions in to codecolor.py;
-* Create installable package from the codecolor.py module;
-* Manually test package installation
+* Add pytest unit tests
 * Flesh out readme
 	* Motivation
 	* Example usage
 	* Installation
-* Add pytest unit tests
 * Deploy to pypi
 
 

@@ -21,8 +21,17 @@ __all__ = [
 ]
 
 
-def get_all_styles():
-    """Add docstring"""
+def get_all_styles() -> list:
+    """Returns a list of available styles by name (as strings).
+
+    Return a list of names of available syntax highlighting styles
+    from the `pygments` package. This list includes both builtin and
+    plugin styles.
+
+    Returns:
+        list: The list of names of available syntax highlighting styles
+        from the pygments package. This is a list of strings.
+    """
 
     return list(pygments.styles.get_all_styles())
 
