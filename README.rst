@@ -2,8 +2,7 @@
 codecolor
 =========
 
-.. image:: ../_static/code_color_logo.png
-.. image:: picture.jpeg
+.. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png
    :scale: 100 %
    :align: center
 
