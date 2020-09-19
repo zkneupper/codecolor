@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 """Top-level package for codecolor."""
 
 __author__ = """Zachary Jonathan Kneupper"""

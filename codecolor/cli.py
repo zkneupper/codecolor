@@ -1,4 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 """Console script for codecolor."""
+
+
 import sys
 import click
 
