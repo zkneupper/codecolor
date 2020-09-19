@@ -2,10 +2,10 @@
 codecolor
 =========
 
-<img align="center" height="27%" width="27%" src="docs/_static/code_color_logo.png"/>
-
-# ![Codecolor Logo](https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png)
-
+.. image:: ../_static/code_color_logo.png
+.. image:: picture.jpeg
+   :scale: 100 %
+   :align: center
 
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
