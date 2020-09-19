@@ -2,7 +2,9 @@
 codecolor
 =========
 
-![Codecolor Logo](https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png)
+<img align="center" height="27%" width="27%" src="docs/_static/code_color_logo.png"/>
+
+# ![Codecolor Logo](https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png)
 
 
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
