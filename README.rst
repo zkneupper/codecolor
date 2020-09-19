@@ -3,8 +3,8 @@ codecolor
 =========
 
 .. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png
-   :scale: 100 %
-   :align: center
+   :scale: 80 %
+   :align: right
 
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
