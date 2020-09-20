@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-"""Add Module Docstring
+"""Codecolor Module
+
+This module defines the following codecolor functions:
+    * get_all_styles
+    * highlight_code
+    * getsource
+    * printsource
+
 """
 
 
 # Python standard library imports
 import inspect
 import sys
+from typing import NoReturn
 
 
 # External library imports
@@ -67,7 +75,7 @@ def get_all_styles() -> list:
     return list(styles.get_all_styles())
 
 
-def highlight_code(code, style="default"):
+def highlight_code(code, style="default") -> str:
     """Apply syntax highlighting to the string of python `code`.
 
     Args:
@@ -135,7 +143,9 @@ def getsource(obj, style="default") -> str:
     return code_string
 
 
-def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
+def printsource(
+    obj, style="default", end="\n", file=sys.stdout, flush=False
+) -> NoReturn:
     """Print the syntax-highlighted source code for the python object `obj`.
 
     Print the syntax-highlighted source code for the python object `obj` to
@@ -169,6 +179,17 @@ def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
         flush (:obj:`bool`, optional): Whether to forcibly flush the stream.
 
             Defaults to False.
+
+    Example:
+        How does the pytorch relu function work under the hood?
+        You can easily inspect the source code of the pytorch relu function
+        by using `codecolor.printsource(relu)` to to print the source code of
+        the relu function with syntax highlighting.
+
+        >>> from codecolor import printsource
+        >>> from torch.nn.functional import relu
+        >>> printsource(relu)
+        # prints the source code of the relu function with syntax highlighting
 
     """
 
