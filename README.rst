@@ -31,7 +31,7 @@ Features
 
 .. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/codecolor-demo.gif
    :align: center
-   :scale: 100 %
+   :scale: 125 %
 
 
 * ...
