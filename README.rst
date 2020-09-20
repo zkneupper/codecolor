@@ -29,6 +29,11 @@ Inspect python object code with colorful syntax highlighting
 Features
 --------
 
+.. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/codecolor-demo.gif
+   :align: center
+   :scale: 100 %
+
+
 * ...
 
 
