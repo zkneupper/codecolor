@@ -25,6 +25,7 @@ import pytest
 ##### Tests for `get_all_styles()` #####
 ########################################
 
+
 def test_get_all_styles_return_type():
     """Write test."""
 
@@ -32,7 +33,7 @@ def test_get_all_styles_return_type():
 
     # Assert that the output returned is a list
     assert isinstance(output, list)
-    
+
     # Assert that every element of the returned list is a string
     assert all([isinstance(x, str) for x in output])
 
@@ -46,12 +47,13 @@ def test_get_all_styles_default():
 
     output = codecolor.get_all_styles()
 
-    assert ("default" in output)
+    assert "default" in output
 
 
 ########################################
 ##### Tests for `highlight_code()` #####
 ########################################
+
 
 def test_highlight_code():
     """Write test."""
@@ -59,7 +61,6 @@ def test_highlight_code():
     # codecolor.highlight_code()
 
     assert True
-
 
 
 ########################################
@@ -81,10 +82,6 @@ def test_printsource():
     # codecolor.printsource()
 
     assert True
-
-
-
-
 
 
 #############################################################
