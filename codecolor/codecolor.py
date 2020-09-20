@@ -37,7 +37,6 @@ from pygments import styles
 
 # To Do:
 #     * Add module doc string
-#     * Run pylint on module
 #     * Run codespell on module (optional?)
 #     * Add type hints to all functions (optional?)
 #     * Add docstring style convention note in documentation for contributors.
@@ -76,7 +75,7 @@ def highlight_code(code, style="default"):
         style (:obj:`str`, optional): The style to apply.
             The name of the syntax highlighting style to apply to the `code`.
 
-            Defaults to "default". The "default" style is the same syntax 
+            Defaults to "default". The "default" style is the same syntax
             highlighting style used by default in ipython and jupyter notebooks.
 
             Any style must be listed among the available syntax highlighting
@@ -107,18 +106,18 @@ def getsource(obj, style="default") -> str:
         style (:obj:`str` or `NoneType`, optional): The style to apply.
             The name of the syntax highlighting style to apply to the `code`.
 
-            Defaults to "default". The "default" style is the same syntax 
+            Defaults to "default". The "default" style is the same syntax
             highlighting style used by default in ipython and jupyter notebooks.
 
-            If style=None, no syntax highlighting style will be applied, and 
+            If style=None, no syntax highlighting style will be applied, and
             the `code` string will be returned unchanged.
 
-            If `style` is not None, `style` must be a style listed among the 
+            If `style` is not None, `style` must be a style listed among the
             available syntax highlighting styles from the `pygments` package.
             See `get_all_styles()`.
 
     Returns:
-        str: The text of the syntax-highlighted source code for the object 
+        str: The text of the syntax-highlighted source code for the object
             `obj`.
 
             The source code is returned as a single string.
@@ -139,7 +138,7 @@ def getsource(obj, style="default") -> str:
 def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
     """Print the syntax-highlighted source code for the python object `obj`.
 
-    Print the syntax-highlighted source code for the python object `obj` to 
+    Print the syntax-highlighted source code for the python object `obj` to
     sys.stdout (by default) or to a stream.
 
     Args:
@@ -148,17 +147,17 @@ def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
         style (:obj:`str` or `NoneType`, optional): The style to apply.
             The name of the syntax highlighting style to apply to the `code`.
 
-            Defaults to "default". The "default" style is the same syntax 
+            Defaults to "default". The "default" style is the same syntax
             highlighting style used by default in ipython and jupyter notebooks.
 
-            If style=None, no syntax highlighting style will be applied, and 
+            If style=None, no syntax highlighting style will be applied, and
             the `code` string will be returned unchanged.
 
-            If `style` is not None, `style` must be a style listed among the 
+            If `style` is not None, `style` must be a style listed among the
             available syntax highlighting styles from the `pygments` package.
             See `get_all_styles()`.
 
-        end (:obj:`str`, optional): String appended after the source code 
+        end (:obj:`str`, optional): String appended after the source code
             string.
 
             Defaults to the newline string "\n".
