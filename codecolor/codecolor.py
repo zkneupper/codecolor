@@ -9,6 +9,13 @@ This module defines the following codecolor functions:
     * getsource
     * printsource
 
+Todo:
+    * Run codespell on module (optional?)
+    * Add type hints to all functions (optional?)
+    * Add docstring style convention note in documentation for contributors.
+        # Use this docstring style convention:
+        # https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
 """
 
 
@@ -23,31 +30,16 @@ import pygments
 from pygments import styles
 
 
-# Importing `from pygments import styles` because
-# pytest raised an AttributeError when it tried to execute
-# `pygments.styles.get_all_styles()`:
+# WHY DOES PYTEST RAISE AttributeError: module 'pygments' has no attribute 'styles'?
+#
+# Importing `from pygments import styles` because pytest raised an AttributeError
+# when it tried to execute `pygments.styles.get_all_styles()`:
 #
 # >>> AttributeError: module 'pygments' has no attribute 'styles'
-# >>>
 # >>> ../codecolor/codecolor.py:37: AttributeError
 #
-# Replaced
-#     return list(pygments.styles.get_all_styles())
-# with
-#     return list(styles.get_all_styles())
-#
-# WHY DOES PYTEST RAISE AttributeError: module 'pygments' has no attribute 'styles'?
-
-
-# Use this docstring style convention:
-# https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
-
-
-# To Do:
-#     * Add module doc string
-#     * Run codespell on module (optional?)
-#     * Add type hints to all functions (optional?)
-#     * Add docstring style convention note in documentation for contributors.
+# Replaced:     return list(pygments.styles.get_all_styles())
+# With:         return list(styles.get_all_styles())
 
 
 __all__ = [
