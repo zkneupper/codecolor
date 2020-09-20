@@ -14,20 +14,31 @@ import pygments
 
 from pygments import styles
 
-# Importing `from pygments import styles` because 
+# Importing `from pygments import styles` because
 # pytest raised an AttributeError when it tried to execute
 # `pygments.styles.get_all_styles()`:
-# 
+#
 # >>> AttributeError: module 'pygments' has no attribute 'styles'
-# >>> 
+# >>>
 # >>> ../codecolor/codecolor.py:37: AttributeError
-# 
+#
 # Replaced
 #     return list(pygments.styles.get_all_styles())
 # with
 #     return list(styles.get_all_styles())
 #
 # WHY DOES PYTEST RAISE AttributeError: module 'pygments' has no attribute 'styles'?
+
+
+# Use this docstring style convention:
+# https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
+
+# To Do:
+#     * Add function doc strings
+#     * Add module doc string
+#     * Run codespell on module
+#     * Add type hints to all functions (optional?)
 
 
 __all__ = [
@@ -48,6 +59,7 @@ def get_all_styles() -> list:
     Returns:
         list: The list of names of available syntax highlighting styles
         from the pygments package. This is a list of strings.
+
     """
 
     # return list(pygments.styles.get_all_styles())
@@ -55,7 +67,23 @@ def get_all_styles() -> list:
 
 
 def highlight_code(code, style="default"):
-    """Add docstring"""
+    """Apply syntax highlighting to the string of python `code`.
+
+    Args:
+        code (str): The string of python code to be styled.
+        style (:obj:`str`, optional): The style to apply.
+            The name of the syntax highlighting style to apply to the `code`.
+
+            Defaults to "default". The "default" style is the same syntax 
+            highlighting style used by default in ipython and jupyter notebooks.
+
+            Any style must be listed among the available syntax highlighting
+            styles from the `pygments` package. See `get_all_styles()`.
+
+    Returns:
+        str: A string of python code that has been syntax highlighted.
+
+    """
 
     assert style in get_all_styles()
 
@@ -69,10 +97,32 @@ def highlight_code(code, style="default"):
 
 
 def getsource(obj, style="default") -> str:
-    """Add docstring
+    """Return the syntax-highlighted source code for the python object `obj`.
 
-    If you set style=None, function will return the code 
-    with no syntax highlighting.
+    Args:
+        obj : A python module, class, method, function, traceback, frame, or
+            code object.
+        style (:obj:`str` or `NoneType`, optional): The style to apply.
+            The name of the syntax highlighting style to apply to the `code`.
+
+            Defaults to "default". The "default" style is the same syntax 
+            highlighting style used by default in ipython and jupyter notebooks.
+
+            If style=None, no syntax highlighting style will be applied, and 
+            the `code` string will be returned unchanged.
+
+            If `style` is not None, `style` must be a style listed among the 
+            available syntax highlighting styles from the `pygments` package.
+            See `get_all_styles()`.
+
+    Returns:
+        str: The text of the syntax-highlighted source code for the object 
+            `obj`.
+
+            The source code is returned as a single string.
+
+    Raises:
+        OSError: If the source code cannot be retrieved.
 
     """
 
@@ -85,6 +135,8 @@ def getsource(obj, style="default") -> str:
 
 
 def printsource(obj, style="default"):
-    """Add docstring"""
+    """Add docstring
+
+    """
     highlighted_code = getsource(obj, style=style)
     print(highlighted_code)
