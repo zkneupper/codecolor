@@ -45,8 +45,8 @@ To Do List
 * Add docstrings to functions in to codecolor.py;
 * Add pytest unit tests
 * Flesh out readme
-	* Motivation
 	* Example usage
+	* Motivation
 	* Installation
 	* Center logo image
 * Deploy to pypi
