@@ -41,8 +41,6 @@ Features
 To Do List
 --------
 
-* Add module docstring to codecolor.py;
-* Add docstrings to functions in to codecolor.py;
 * Add pytest unit tests
 * Flesh out readme
 	* Example usage
