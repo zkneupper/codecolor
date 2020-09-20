@@ -9,10 +9,11 @@
 import inspect
 import sys
 
+
 # External library imports
 import pygments
-
 from pygments import styles
+
 
 # Importing `from pygments import styles` because
 # pytest raised an AttributeError when it tried to execute
@@ -35,10 +36,11 @@ from pygments import styles
 
 
 # To Do:
-#     * Add function doc strings
 #     * Add module doc string
-#     * Run codespell on module
+#     * Run pylint on module
+#     * Run codespell on module (optional?)
 #     * Add type hints to all functions (optional?)
+#     * Add docstring style convention note in documentation for contributors.
 
 
 __all__ = [
@@ -134,9 +136,40 @@ def getsource(obj, style="default") -> str:
     return code_string
 
 
-# def printsource(obj, style="default"):
 def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
-    """Add docstring
+    """Print the syntax-highlighted source code for the python object `obj`.
+
+    Print the syntax-highlighted source code for the python object `obj` to 
+    sys.stdout (by default) or to a stream.
+
+    Args:
+        obj : A python module, class, method, function, traceback, frame, or
+            code object.
+        style (:obj:`str` or `NoneType`, optional): The style to apply.
+            The name of the syntax highlighting style to apply to the `code`.
+
+            Defaults to "default". The "default" style is the same syntax 
+            highlighting style used by default in ipython and jupyter notebooks.
+
+            If style=None, no syntax highlighting style will be applied, and 
+            the `code` string will be returned unchanged.
+
+            If `style` is not None, `style` must be a style listed among the 
+            available syntax highlighting styles from the `pygments` package.
+            See `get_all_styles()`.
+
+        end (:obj:`str`, optional): String appended after the source code 
+            string.
+
+            Defaults to the newline string "\n".
+
+        file (optional): A file-like object (stream).
+
+            Defaults to the current sys.stdout.
+
+        flush (:obj:`bool`, optional): Whether to forcibly flush the stream.
+
+            Defaults to False.
 
     """
 
