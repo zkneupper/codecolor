@@ -12,6 +12,23 @@ import inspect
 # External library imports
 import pygments
 
+from pygments import styles
+
+# Importing `from pygments import styles` because 
+# pytest raised an AttributeError when it tried to execute
+# `pygments.styles.get_all_styles()`:
+# 
+# >>> AttributeError: module 'pygments' has no attribute 'styles'
+# >>> 
+# >>> ../codecolor/codecolor.py:37: AttributeError
+# 
+# Replaced
+#     return list(pygments.styles.get_all_styles())
+# with
+#     return list(styles.get_all_styles())
+#
+# WHY DOES PYTEST RAISE AttributeError: module 'pygments' has no attribute 'styles'?
+
 
 __all__ = [
     "get_all_styles",
@@ -33,7 +50,8 @@ def get_all_styles() -> list:
         from the pygments package. This is a list of strings.
     """
 
-    return list(pygments.styles.get_all_styles())
+    # return list(pygments.styles.get_all_styles())
+    return list(styles.get_all_styles())
 
 
 def highlight_code(code, style="default"):
