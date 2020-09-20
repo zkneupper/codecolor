@@ -7,7 +7,7 @@
 
 # Python standard library imports
 import inspect
-
+import sys
 
 # External library imports
 import pygments
@@ -134,9 +134,14 @@ def getsource(obj, style="default") -> str:
     return code_string
 
 
-def printsource(obj, style="default"):
+# def printsource(obj, style="default"):
+def printsource(obj, style="default", end="\n", file=sys.stdout, flush=False):
     """Add docstring
 
     """
+
     highlighted_code = getsource(obj, style=style)
-    print(highlighted_code)
+
+    print(
+        highlighted_code, end=end, file=file, flush=flush,
+    )
