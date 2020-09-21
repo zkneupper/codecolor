@@ -42,7 +42,7 @@ Functions:
 
 
 __author__ = "Zachary Jonathan Kneupper"
-__email__ = ""
+__email__ = "zachary.kneupper@gmail.com"
 __version__ = "0.0.1"
 
 

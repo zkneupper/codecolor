@@ -27,7 +27,7 @@ test_requirements = [
 
 setup(
     author="Zachary Jonathan Kneupper",
-    author_email='""',
+    author_email="zachary.kneupper@gmail.com",
     python_requires=">=3.5",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",

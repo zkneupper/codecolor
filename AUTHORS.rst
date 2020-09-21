@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Zachary Jonathan Kneupper <"">
+* Zachary Jonathan Kneupper <zachary.kneupper@gmail.com>
 
 Contributors
 ------------
