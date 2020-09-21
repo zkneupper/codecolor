@@ -42,12 +42,13 @@ You can easily inspect the source code of the pytorch relu function
 by using `codecolor.printsource(relu)` to to print the source code of
 the relu function with syntax highlighting.
 
-::
+
+.. code-block:: python
 
     from codecolor import printsource
-	
+
 	from torch.nn.functional import relu
-	
+
 	printsource(relu)
 	# prints the source code of the relu function with syntax highlighting
 
