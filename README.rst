@@ -33,10 +33,12 @@ To-Do
 
 * Add pytest unit tests
 * Flesh out readme
-  * Example usage
-  * Motivation
-  * Installation
-  * Center logo image
+
+        * Example usage
+        * Motivation
+        * Installation
+        * Center logo image
+        
 * Deploy to pypi
 
 
