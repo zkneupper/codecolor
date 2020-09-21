@@ -25,6 +25,10 @@ test_requirements = [
     "pytest>=3",
 ]
 
+
+# PEP 440 -- Version Identification and Dependency Specification
+# https://www.python.org/dev/peps/pep-0440/
+
 setup(
     author="Zachary Jonathan Kneupper",
     author_email="zachary.kneupper@gmail.com",
@@ -53,6 +57,6 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/zkneupper/codecolor",
-    version="0.0.1",
+    version="0.0.1", # version="0.0.dev2", <- last test
     zip_safe=False,
 )
