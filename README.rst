@@ -46,9 +46,11 @@ the relu function with syntax highlighting.
 .. code-block:: python
 
     from codecolor import printsource
-	from torch.nn.functional import relu
-	printsource(relu)
-	# prints the source code of the relu function with syntax highlighting
+
+    from torch.nn.functional import relu
+    
+    printsource(relu)
+    # prints the source code of the relu function with syntax highlighting
 
 .. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/codecolor-demo.gif
 
