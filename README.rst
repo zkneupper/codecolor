@@ -3,8 +3,6 @@ codecolor
 =========
 
 .. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/code_color_logo.png
-   :align: center
-   :scale: 80 %
 
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
@@ -15,8 +13,6 @@ codecolor
 .. image:: https://readthedocs.org/projects/codecolor/badge/?version=latest
         :target: https://codecolor.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
-
-
 
 
 Inspect python object code with colorful syntax highlighting
@@ -30,24 +26,19 @@ Features
 --------
 
 .. image:: https://raw.githubusercontent.com/zkneupper/codecolor/master/docs/_static/codecolor-demo.gif
-   :align: center
-   :scale: 125 %
 
 
-* ...
-
-
-
-To Do List
+To-Do
 --------
 
 * Add pytest unit tests
 * Flesh out readme
-	* Example usage
-	* Motivation
-	* Installation
-	* Center logo image
+  * Example usage
+  * Motivation
+  * Installation
+  * Center logo image
 * Deploy to pypi
+
 
 
 
