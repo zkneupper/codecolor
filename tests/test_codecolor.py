@@ -7,9 +7,9 @@ Write tests for the following functions:
     * get_all_styles
     * highlight_code
     * getsource
-    * printsource
 
 No tests for:
+    * printsource
 
 """
 
@@ -72,8 +72,7 @@ def test_highlight_code_return_len():
     highlighted_code = codecolor.highlight_code(code, style="default")
 
     # Assert returned value is at least as long as the input code string.
-    assert (len(highlighted_code) >= len(code))
-
+    assert len(highlighted_code) >= len(code)
 
 
 ########################################
@@ -85,6 +84,7 @@ def test_getsource_return_type_0():
     """Write test."""
 
     import pathlib
+
     obj = pathlib.Path.iterdir
     code_string = codecolor.getsource(obj)
 
@@ -96,6 +96,7 @@ def test_getsource_return_type_1():
     """Write test."""
 
     import pathlib
+
     obj = pathlib.Path.iterdir
     code_string = codecolor.getsource(obj, style="default")
 
@@ -107,6 +108,7 @@ def test_getsource_return_type_2():
     """Write test."""
 
     import pathlib
+
     obj = pathlib.Path.iterdir
     code_string = codecolor.getsource(obj, style=None)
 
@@ -114,21 +116,19 @@ def test_getsource_return_type_2():
     assert isinstance(code_string, str)
 
 
-
-
 ########################################
-##### Tests for `test_printsource()` #####
+##### Tests for `test_printsource()` ###
 ########################################
-# 
-# 
+#
+#
 # def test_printsource():
 #     """Write test."""
-# 
+#
 #     # codecolor.printsource()
-# 
+#
 #     assert True
-# 
-# 
+#
+#
 ########################################
 ########################################
 ########################################
