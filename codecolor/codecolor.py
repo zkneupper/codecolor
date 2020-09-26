@@ -91,9 +91,7 @@ def highlight_code(code, style="default") -> str:
     assert style in get_all_styles()
 
     highlighted_code = pygments.highlight(
-        code,
-        lexers.PythonLexer(),
-        formatters.Terminal256Formatter(style=style),
+        code, lexers.PythonLexer(), formatters.Terminal256Formatter(style=style),
     )
 
     return highlighted_code
