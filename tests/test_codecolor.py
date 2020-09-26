@@ -8,6 +8,9 @@ Write tests for the following functions:
     * highlight_code
     * getsource
     * printsource
+
+No tests for:
+
 """
 
 
@@ -15,10 +18,7 @@ Write tests for the following functions:
 import codecolor
 import pytest
 
-
 # from codecolor import codecolor
-# from click.testing import CliRunner
-# from codecolor import cli
 
 
 ########################################
@@ -55,60 +55,80 @@ def test_get_all_styles_default():
 ########################################
 
 
-def test_highlight_code():
+def test_highlight_code_return_type():
     """Write test."""
 
-    # codecolor.highlight_code()
+    code = "import this"
+    highlighted_code = codecolor.highlight_code(code, style="default")
 
-    assert True
+    # Assert that the output returned is a string.
+    assert isinstance(highlighted_code, str)
+
+
+def test_highlight_code_return_len():
+    """Write test."""
+
+    code = "import this"
+    highlighted_code = codecolor.highlight_code(code, style="default")
+
+    # Assert returned value is at least as long as the input code string.
+    assert (len(highlighted_code) >= len(code))
+
 
 
 ########################################
-########################################
+##### Tests for `test_getsource()` #####
 ########################################
 
 
-def test_getsource():
+def test_getsource_return_type_0():
     """Write test."""
 
-    # codecolor.getsource()
+    import pathlib
+    obj = pathlib.Path.iterdir
+    code_string = codecolor.getsource(obj)
 
-    assert True
+    # Assert that the output returned is a string.
+    assert isinstance(code_string, str)
 
 
-def test_printsource():
+def test_getsource_return_type_1():
     """Write test."""
 
-    # codecolor.printsource()
+    import pathlib
+    obj = pathlib.Path.iterdir
+    code_string = codecolor.getsource(obj, style="default")
 
-    assert True
-
-
-#############################################################
-#############################################################
-
-# @pytest.fixture
-# def response():
-#     """Sample pytest fixture.
-
-#     See more at: http://doc.pytest.org/en/latest/fixture.html
-#     """
-#     # import requests
-#     # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+    # Assert that the output returned is a string.
+    assert isinstance(code_string, str)
 
 
-# def test_content(response):
-#     """Sample pytest test function with the pytest fixture as an argument."""
-#     # from bs4 import BeautifulSoup
-#     # assert 'GitHub' in BeautifulSoup(response.content).title.string
+def test_getsource_return_type_2():
+    """Write test."""
+
+    import pathlib
+    obj = pathlib.Path.iterdir
+    code_string = codecolor.getsource(obj, style=None)
+
+    # Assert that the output returned is a string.
+    assert isinstance(code_string, str)
 
 
-# def test_command_line_interface():
-#     """Test the CLI."""
-#     runner = CliRunner()
-#     result = runner.invoke(cli.main)
-#     assert result.exit_code == 0
-#     assert 'codecolor.cli.main' in result.output
-#     help_result = runner.invoke(cli.main, ['--help'])
-#     assert help_result.exit_code == 0
-#     assert '--help  Show this message and exit.' in help_result.output
+
+
+########################################
+##### Tests for `test_printsource()` #####
+########################################
+# 
+# 
+# def test_printsource():
+#     """Write test."""
+# 
+#     # codecolor.printsource()
+# 
+#     assert True
+# 
+# 
+########################################
+########################################
+########################################
