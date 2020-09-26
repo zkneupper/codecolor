@@ -27,19 +27,21 @@ from typing import NoReturn
 
 # External library imports
 import pygments
+from pygments import formatters
+from pygments import lexers
 from pygments import styles
 
 
-# WHY DOES PYTEST RAISE AttributeError: module 'pygments' has no attribute 'styles'?
+# WHY DOES PYTEST RAISE AttributeErrors?
 #
-# Importing `from pygments import styles` because pytest raised an AttributeError
-# when it tried to execute `pygments.styles.get_all_styles()`:
+# Pytest throughs errors like:
+# + AttributeError: module 'pygments' has no attribute 'styles'
+# + AttributeError: module 'pygments' has no attribute 'lexers'
+# + AttributeError: module 'pygments' has no attribute 'formatters'
 #
-# >>> AttributeError: module 'pygments' has no attribute 'styles'
-# >>> ../codecolor/codecolor.py:37: AttributeError
+# Unless you `from pygments import formatters` etc and
+# don't try to access `pygments.formatters` directly
 #
-# Replaced:     return list(pygments.styles.get_all_styles())
-# With:         return list(styles.get_all_styles())
 
 
 __all__ = [
@@ -90,8 +92,8 @@ def highlight_code(code, style="default") -> str:
 
     highlighted_code = pygments.highlight(
         code,
-        pygments.lexers.PythonLexer(),
-        pygments.formatters.Terminal256Formatter(style=style),
+        lexers.PythonLexer(),
+        formatters.Terminal256Formatter(style=style),
     )
 
     return highlighted_code
