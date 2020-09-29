@@ -41,7 +41,7 @@ def test_get_all_styles_return_type():
 def test_get_all_styles_default():
     """Unit test: "default" exists.
 
-    Assert that the "default" style is included in the list of 
+    Assert that the "default" style is included in the list of
     styles returned by `codecolor.get_all_styles()`.
     """
 

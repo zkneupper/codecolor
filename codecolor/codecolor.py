@@ -136,7 +136,7 @@ def getsource(obj, style="default") -> str:
 
 
 def printsource(
-    obj, style="default", end="\n", file=sys.stdout, flush=False
+    obj, style="default", end="\n", file=sys.stdout, flush=False,
 ) -> NoReturn:
     """Print the syntax-highlighted source code for the python object `obj`.
 

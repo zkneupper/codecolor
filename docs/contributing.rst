@@ -16,3 +16,8 @@ Install pre-commit hooks with
 ```bash
 pre-commit install
 ```
+
+Run hooks on all files
+```bash
+pre-commit run --all-files
+```

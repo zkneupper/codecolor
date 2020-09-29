@@ -45,7 +45,7 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     description="Inspect python object code with colorful syntax highlighting",
-    entry_points={"console_scripts": ["codecolor=codecolor.cli:main",],},
+    entry_points={"console_scripts": ["codecolor=codecolor.cli:main"]},
     install_requires=requirements,
     license="Apache Software License 2.0",
     long_description=readme + "\n\n" + history,
