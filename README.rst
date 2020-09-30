@@ -7,15 +7,26 @@ codecolor
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
 
-.. image:: https://circleci.com/gh/zkneupper/codecolor.svg?style=svg
+.. image:: https://circleci.com/gh/zkneupper/codecolor.svg?style=shield
     :target: https://circleci.com/gh/zkneupper/codecolor
-
-.. image:: https://img.shields.io/travis/zkneupper/codecolor.svg
-        :target: https://travis-ci.com/zkneupper/codecolor
 
 .. image:: https://readthedocs.org/projects/codecolor/badge/?version=latest
         :target: https://codecolor.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+
+
+`master` branch ci status:
+
+
+.. image:: https://circleci.com/gh/zkneupper/codecolor/tree/master.svg?style=shield
+    :target: https://circleci.com/gh/zkneupper/codecolor/tree/master
+
+
+`develop` branch ci status:
+
+
+.. image:: https://circleci.com/gh/zkneupper/codecolor/tree/develop.svg?style=shield
+    :target: https://circleci.com/gh/zkneupper/codecolor/tree/develop
 
 
 Inspect python object code with colorful syntax highlighting!
