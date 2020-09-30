@@ -7,6 +7,9 @@ codecolor
 .. image:: https://img.shields.io/pypi/v/codecolor.svg
         :target: https://pypi.python.org/pypi/codecolor
 
+.. image:: https://circleci.com/gh/zkneupper/codecolor.svg?style=svg
+    :target: https://circleci.com/gh/zkneupper/codecolor
+
 .. image:: https://img.shields.io/travis/zkneupper/codecolor.svg
         :target: https://travis-ci.com/zkneupper/codecolor
 
