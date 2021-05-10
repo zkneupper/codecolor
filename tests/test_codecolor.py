@@ -35,7 +35,7 @@ def test_get_all_styles_return_type():
     assert isinstance(output, list)
 
     # Assert that every element of the returned list is a string
-    assert all([isinstance(x, str) for x in output])
+    assert all(isinstance(x, str) for x in output)
 
 
 def test_get_all_styles_default():

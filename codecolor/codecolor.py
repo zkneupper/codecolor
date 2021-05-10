@@ -90,11 +90,9 @@ def highlight_code(code, style="default") -> str:
 
     assert style in get_all_styles()
 
-    highlighted_code = pygments.highlight(
+    return pygments.highlight(
         code, lexers.PythonLexer(), formatters.Terminal256Formatter(style=style),
     )
-
-    return highlighted_code
 
 
 def getsource(obj, style="default") -> str:
